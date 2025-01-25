@@ -1,6 +1,3 @@
-#README.md - we only want the pdf file
-README.md
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
