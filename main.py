@@ -1,6 +1,10 @@
 import tkinter as tk
-import gui
 
+try:
+    import tkinter as tk
+except ImportError:
+    print("Tkinter ist auf diesem System nicht installiert. Bitte installieren Sie es, um die GUI zu verwenden. Für weitere Infos siehe Readme.md")
+    exit(1)
 
 # Hauptprogramm
 if __name__ == "__main__":
