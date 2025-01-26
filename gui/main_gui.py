@@ -46,7 +46,8 @@ class FileCopyGUI:
             return
         
         try:
-            copied_files = copyfiles.copy(self.source_frame.get_source_paths(), self.destination_frame.get_dest_path(), self.search_frame.get_search_strings())
+            copyer = copyfiles.CopyFiles(self.source_frame.get_source_paths(), self.destination_frame.get_dest_path(), self.search_frame.get_search_strings()) 
+            copied_files = copyer.start_copy()
             self.status_label.config(text=f"{copied_files} Dateien kopiert.")
             messagebox.showinfo("Fertig", f"{copied_files} Dateien erfolgreich kopiert!")
         except Exception as e:
