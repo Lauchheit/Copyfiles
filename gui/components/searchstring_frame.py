@@ -18,13 +18,13 @@ class SearchFrame(tk.Frame):
         self.columnconfigure(1, weight=3)
 
         # Suchstring hinzufügen
-        tk.Label(self, text="Suchstring:").grid(row=4, column=0, padx=10, pady=5, sticky="w")
+        tk.Label(self, text="Suchstring:").grid(row=0, column=0, padx=10, pady=5, sticky="w")
         self.search_entry = tk.Entry(self)
-        self.search_entry.grid(row=4, column=1, padx=10, pady=5, sticky="ew")
+        self.search_entry.grid(row=0, column=1, padx=10, pady=5, sticky="ew")
         
         # Rahmen für die Suchstring-Buttons
         searchstring_button_frame = tk.Frame(self)
-        searchstring_button_frame.grid(row=5, column=0, columnspan=2, sticky="w", padx=10, pady=5)
+        searchstring_button_frame.grid(row=1, column=0, columnspan=2, sticky="w", padx=10, pady=5)
 
         # Suchstring Hinzufügen-Button
         add_search_button = tk.Button(searchstring_button_frame, text="Hinzufügen", command=self.add_search_string)
@@ -36,7 +36,7 @@ class SearchFrame(tk.Frame):
 
         # Suchstring-Liste
         self.search_listbox = tk.Listbox(self, height=5)
-        self.search_listbox.grid(row=6, column=0, columnspan=2, padx=10, pady=5, sticky="ew")
+        self.search_listbox.grid(row=2, column=0, columnspan=2, padx=10, pady=5, sticky="ew")
 
     def add_search_string(self):
         search_string = self.search_entry.get().strip()
