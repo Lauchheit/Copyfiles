@@ -13,7 +13,7 @@ class CopyFiles:
 
     def start_copy(self):
         self.viable_copy_files = self.get_copyable_files_list()
-        self.copy_files()  # Klammern hinzugefügt
+        self.copy_files()  
         return len(self.viable_copy_files)
 
     def get_copyable_files_list(self):
